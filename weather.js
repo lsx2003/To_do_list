@@ -1,6 +1,6 @@
 const weather = document.querySelector(".js-weather")
 const API_KEY ="060e4f965453db8fcf7c75d5833ab636"
-// https://openweathermap.org/ 의 API(다른 서버에서 쉽게 데ㅣ터를 가져오는 수단)
+// https://openweathermap.org/ 의 API(다른 서버에서 쉽게 데이터를 가져오는 수단)
 const COORDS = `coords`;
 
 function getWeather(lat, lng){
@@ -14,7 +14,7 @@ function getWeather(lat, lng){
             console.log(json)
             const temperature = json.main.temp;
             const place = json.name;
-            weather.innerText = `${temperature}°C, ${place}`;
+            weather.innerText = `${place}, ${temperature}°C`;
         });
         
         // fetch 실행되고 데이터가 넘어오지 않은 상태에서 다음작업을 지시할 경우, fetch가 완료되지 않을 수 있기 때문에 완료까지 기다려주기 위해 then 함수 사용  
